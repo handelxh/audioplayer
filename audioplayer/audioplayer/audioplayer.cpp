@@ -5,7 +5,6 @@
 #include "stdafx.h"
 #include "audioplayer.h"
 #include "audioplayerDlg.h"
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -69,14 +68,16 @@ BOOL CaudioplayerApp::InitInstance()
 
 	CaudioplayerDlg dlg;
 	m_pMainWnd = &dlg;
-	INT_PTR nResponse = dlg.DoModal();
+	INT_PTR nResponse = dlg.DoModal();  
 	if (nResponse == IDOK)
 	{
+
 		// TODO: 在此放置处理何时用
 		//  “确定”来关闭对话框的代码
 	}
 	else if (nResponse == IDCANCEL)
 	{
+		flags = 0x02;
 		// TODO: 在此放置处理何时用
 		//  “取消”来关闭对话框的代码
 	}
@@ -86,9 +87,8 @@ BOOL CaudioplayerApp::InitInstance()
 	{
 		delete pShellManager;
 	}
-
+	flags = 0x02;
 	// 由于对话框已关闭，所以将返回 FALSE 以便退出应用程序，
 	//  而不是启动应用程序的消息泵。
 	return FALSE;
 }
-

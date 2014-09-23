@@ -5,9 +5,11 @@
 #include <EndpointVolume.h>
 #include "CWaveFile.h"
 #include "notification.h"
+
 #define REFTIMES_PER_SEC  10000*1000*1
 #define REFTIMES_PER_MILLISEC  10000
 #include <process.h>  
+#include "define.h"
 //     if (FAILED(hres)) { goto Exit; }
 #define SAFE_RELEASE(punk)  \
     if ((punk) != NULL)  \
@@ -18,5 +20,9 @@ const IID IID_IMMDeviceEnumerator = __uuidof(IMMDeviceEnumerator);
 const IID IID_IAudioClient = __uuidof(IAudioClient);
 const IID IID_IAudioRenderClient = __uuidof(IAudioRenderClient);
 
-extern FILE *frp; 
-extern int scdu;
+// extern FILE *frp; 
+// extern int scdu;
+// extern int seek;
+extern  struct filedate fldta;
+extern CSliderCtrl schedule;
+extern int renderStatus ;

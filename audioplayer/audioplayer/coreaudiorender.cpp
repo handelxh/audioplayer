@@ -1,16 +1,16 @@
 #include "stdafx.h"
 
 #include "coreaudiorender.h"
+DWORD flags = 0;
 unsigned int WINAPI CoreAudioRender(void *)
 {
-    DWORD flags = 0;
     IMMDeviceEnumerator *pEnumerator = NULL;
     IMMDevice *pDevice = NULL;
     IAudioClient *pAudioClient = NULL;
     IAudioRenderClient *pRenderClient = NULL;
     WAVEFORMATEX *pwfx = NULL;
     HRESULT hr;
-    REFERENCE_TIME hnsRequestedDuration = REFTIMES_PER_SEC;
+    REFERENCE_TIME hnsRequestedDuration = REFTIMES_PER_SEC * 1;
     REFERENCE_TIME hnsActualDuration;
 
     UINT32 bufferFrameCount;
@@ -30,7 +30,7 @@ unsigned int WINAPI CoreAudioRender(void *)
 
     // LPWSTR pstr;
     // hr = pDevice->GetId(&pstr);
-
+    renderStatus = 1;
     hr = pDevice->Activate(
              IID_IAudioClient, CLSCTX_ALL,
              NULL, (void **)&pAudioClient);
@@ -55,14 +55,16 @@ unsigned int WINAPI CoreAudioRender(void *)
     // Grab the entire buffer for the initial fill operation.
     hr = pRenderClient->GetBuffer(bufferFrameCount, &pData);
 
+    fldta.seek = (int)( (fldta.scdu / 100.0) * fldta.datelen);
+    fseek(fldta.frp, DATA + fldta.seek, SEEK_SET);
 
-    fseek(frp, DATA, SEEK_SET);
-
-    fread(pData, sizeof(BYTE), bufferFrameCount * 8, frp);
+    fread(pData, sizeof(BYTE), bufferFrameCount * 8, fldta.frp);
 
 
     hr = pRenderClient->ReleaseBuffer(bufferFrameCount, flags);
-
+    fldta.seek += bufferFrameCount * 8 ;
+    fldta.scdu = (int)( (fldta.seek  / fldta.datelen) * 100);
+    schedule.SetPos( fldta.scdu);
     // Calculate the actual duration of the allocated buffer.
     hnsActualDuration = (double)REFTIMES_PER_SEC *
                         bufferFrameCount / pwfx->nSamplesPerSec;
@@ -109,7 +111,7 @@ unsigned int WINAPI CoreAudioRender(void *)
         {
             // Sleep for half the buffer duration.
             Sleep((DWORD)(hnsActualDuration / REFTIMES_PER_MILLISEC / 2));
-
+            //  fseek(fldta.frp, DATA + fldta.seek, SEEK_SET);
             // See how much buffer space is available.
             hr = pAudioClient->GetCurrentPadding(&numFramesPadding);
 
@@ -119,12 +121,19 @@ unsigned int WINAPI CoreAudioRender(void *)
             hr = pRenderClient->GetBuffer(numFramesAvailable, &pData);
 
             // hr = pMySource->LoadData(numFramesAvailable, pData, &flags);
-            //GetWaveData( pData ,frp,numFramesAvailable ,bitperSample);
-            readnum = fread(pData, sizeof(BYTE), numFramesAvailable * 8, frp);
+            //GetWaveData( pData ,fldta.frp,numFramesAvailable ,bitperSample);
+
+
+            // readnum = fread(pData, sizeof(BYTE), numFramesAvailable * 8, fldta.frp);
+            readnum = fread(pData, sizeof(BYTE), numFramesAvailable * 8, fldta.frp);
+            hr = pRenderClient->ReleaseBuffer(numFramesAvailable, flags);
+            fldta.seek += numFramesAvailable * 8 ;
+            // fseek(fldta.frp, DATA + fldta.seek, SEEK_SET);
+            fldta.scdu = (int)((fldta.seek / fldta.datelen) * 100);
+            schedule.SetPos( fldta.scdu);
             if (readnum == 0)
                 flags |= AUDCLNT_BUFFERFLAGS_SILENT;
 
-            hr = pRenderClient->ReleaseBuffer(numFramesAvailable, flags);
         }
     }
 
@@ -139,6 +148,19 @@ unsigned int WINAPI CoreAudioRender(void *)
     SAFE_RELEASE(pAudioClient)
     SAFE_RELEASE(pRenderClient)
     CoUninitialize();
-    fclose(frp);
+    fldta.scdu = 0;
+    fldta.seek = 0;
+    flags = 0;
+    schedule.SetPos( 0);
+    fclose(fldta.frp);
+    fldta.frp = NULL;
+    renderStatus = 0 ;
     return 0;
 }
+
+
+
+// unsigned int WINAPI Syc(void *)
+// {
+
+// }

@@ -1,35 +1,24 @@
-﻿生成启动时间为 2014/9/19 17:36:31。
-     1>项目“F:\github\audioplayer\audioplayer\audioplayer\audioplayer.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
-         正在对“Debug\audioplayer.unsuccessfulbuild”执行 Touch 任务。
-       ClCompile:
-         所有输出均为最新。
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\audioplayer.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt audioplayerDlg.cpp
+﻿生成启动时间为 2014/9/23 14:07:34。
+     1>项目“F:\github\audioplayer\audioplayer\audioplayer\audioplayer.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\audioplayer.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt audioplayer.cpp audioplayerDlg.cpp
          audioplayerDlg.cpp
-     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(101): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(103): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(111): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+         audioplayer.cpp
+         正在生成代码...
        ResourceCompile:
-         所有输出均为最新。
-       ManifestResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\audioplayer.res" audioplayer.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\github\audioplayer\audioplayer\Debug\audioplayer.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\audioplayer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.lib" /MACHINE:X86 Debug\audioplayer.res
-         Debug\audioplayer.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\github\audioplayer\audioplayer\Debug\audioplayer.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.lib" /MACHINE:X86 Debug\audioplayer.res
          Debug\audioplayer.obj
          Debug\audioplayerDlg.obj
          Debug\coreaudiorender.obj
          Debug\stdafx.obj
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\audioplayer.exe.embed.manifest" /manifest Debug\audioplayer.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
-         所有输出均为最新。
-       LinkEmbedManifest:
-         所有输出均为最新。
          audioplayer.vcxproj -> F:\github\audioplayer\audioplayer\Debug\audioplayer.exe
-       FinalizeBuildStatus:
-         正在删除文件“Debug\audioplayer.unsuccessfulbuild”。
-         正在对“Debug\audioplayer.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“F:\github\audioplayer\audioplayer\audioplayer\audioplayer.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“F:\github\audioplayer\audioplayer\audioplayer\audioplayer.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.13
+已用时间 00:00:02.21

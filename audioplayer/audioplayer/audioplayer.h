@@ -30,3 +30,4 @@ public:
 };
 
 extern CaudioplayerApp theApp;
+extern DWORD flags ;

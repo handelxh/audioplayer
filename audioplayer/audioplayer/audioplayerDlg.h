@@ -11,6 +11,7 @@
 #include <process.h>  
 #include "windows.h"
 extern unsigned int WINAPI CoreAudioRender(void *);
+extern DWORD flags;
 #pragma once
 
 
@@ -19,7 +20,6 @@ class CaudioplayerDlg : public CDialogEx
 {
 // 构造
 public:
-	CSliderCtrl schedule;
 
 public:
 	CaudioplayerDlg(CWnd* pParent = NULL);	// 标准构造函数
@@ -43,4 +43,5 @@ protected:
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnNMCustomdrawSliderScd(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnBnClickedstop();
 };
