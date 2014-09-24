@@ -107,27 +107,20 @@
 	},
 	"buffers":
 	[
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 374.0,
 		"selected_items":
 		[
 			[
-				"main",
-				"Set Syntax: MultiMarkdown"
-			],
-			[
 				"saa",
 				"File: Save All"
+			],
+			[
+				"main",
+				"Set Syntax: MultiMarkdown"
 			],
 			[
 				"sa",
@@ -162,7 +155,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 400.0
+		"width": 368.0
 	},
 	"console":
 	{
@@ -186,17 +179,22 @@
 	],
 	"file_history":
 	[
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/resource.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.aps",
+		"/F/github/audioplayer/audioplayer/audioplayer/CWaveFile.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/Debug/link.command.1.tlog",
+		"/F/github/audioplayer/audioplayer/audioplayer/Debug/audioplayer.lastbuildstate",
 		"/C/Users/rickon/Desktop/RenderSharedEventDriven/ToneGen.h",
 		"/C/Users/rickon/Desktop/RenderSharedEventDriven/WASAPIRenderer.cpp",
 		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/F/github/audioplayer/audioplayer/audioplayer/ReadMe.txt",
-		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.h",
 		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.h",
-		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.cpp",
 		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.cpp",
-		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.cpp",
-		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.h",
 		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderer.cpp",
 		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderer.h",
 		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderSharedTimerDriven.cpp",
@@ -316,6 +314,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pM",
+			"flags",
 			"DWORD taskIndex = 0;\n    hTask = AvSetMmThreadCharacteristics(TEXT(\"Pro Audio\"), &taskIndex);",
 			"AvSetMmThreadCharacteristics",
 			"Pro Audio",
@@ -441,9 +441,7 @@
 			"m_fCT",
 			"m_BaseAddr",
 			"m_fLT",
-			"m_fAT",
-			"UpdateDrcTimeByUsb",
-			"WriteRegByte"
+			"m_fAT"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -461,36 +459,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -545,6 +515,14 @@
 		"selected_items":
 		[
 			[
+				"audiodlgh",
+				"audioplayerDlg.h"
+			],
+			[
+				"ren",
+				"coreaudiorender.cpp"
+			],
+			[
 				"addlg",
 				"audioplayer\\audioplayerDlg.cpp"
 			],
@@ -569,9 +547,37 @@
 	},
 	"select_symbol":
 	{
-		"height": 138.0,
+		"height": 63.0,
 		"selected_items":
 		[
+			[
+				"rende",
+				"CoreAudioRender"
+			],
+			[
+				"rend",
+				"CoreAudioRender"
+			],
+			[
+				"butto",
+				"OnBnClickedButton1"
+			],
+			[
+				"butt1",
+				"IDC_BUTTON1"
+			],
+			[
+				"butt",
+				"OnBnClickedButton2"
+			],
+			[
+				"bu",
+				"OnBnClickedButton2"
+			],
+			[
+				"onbu",
+				"OnBnClickedButton1"
+			],
 			[
 				"main",
 				"wmain"
@@ -591,7 +597,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 198.0,
+	"side_bar_width": 137.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
