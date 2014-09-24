@@ -10,10 +10,10 @@
 #include "CWaveFile.h"
 #include <process.h>  
 #include "windows.h"
-extern unsigned int WINAPI CoreAudioRender(void *);
-extern DWORD flags;
+#include "afxwin.h"
+extern DWORD  WINAPI CoreAudioRender(LPVOID pM);
+extern volatile DWORD flags;
 #pragma once
-
 
 // CaudioplayerDlg ¶Ô»°¿ò
 class CaudioplayerDlg : public CDialogEx
@@ -44,4 +44,6 @@ public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnNMCustomdrawSliderScd(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnBnClickedstop();
+	afx_msg void OnBnClickedButton2();
+	CEdit selc;
 };

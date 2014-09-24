@@ -1,0 +1,599 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"read",
+				"readnum"
+			],
+			[
+				"byte",
+				"BYTE"
+			],
+			[
+				"UINT",
+				"UINT8"
+			],
+			[
+				"data",
+				"data1"
+			],
+			[
+				"UN",
+				"UINT32"
+			],
+			[
+				"size",
+				"sizeof"
+			],
+			[
+				"getva",
+				"GETWAVEDATA"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"da",
+				"Data"
+			],
+			[
+				"buff",
+				"bufferFrameCount"
+			],
+			[
+				"Fa",
+				"FALSE"
+			],
+			[
+				"IS",
+				"IsDAC"
+			],
+			[
+				"add",
+				"m_BaseAddr"
+			],
+			[
+				"Is",
+				"IsDAC"
+			],
+			[
+				"getc",
+				"GetCurSel"
+			],
+			[
+				"enab",
+				"enableDrc"
+			],
+			[
+				"s",
+				"step1"
+			],
+			[
+				"bit",
+				"bit1"
+			],
+			[
+				"fa",
+				"m_fAT"
+			],
+			[
+				"fe",
+				"fES"
+			],
+			[
+				"Updatedrc",
+				"UpdateDrcCompressTByUsb"
+			],
+			[
+				"updated",
+				"UpdateDrcCompressTByUsb"
+			],
+			[
+				"updat",
+				"UpdateDrcLimitNoiseByUsb"
+			],
+			[
+				"Udate",
+				"UpdateDrcTimeByUsb"
+			],
+			[
+				"Update",
+				"UpdateDrcSetting"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"main",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"saa",
+				"File: Save All"
+			],
+			[
+				"sa",
+				"File: Save All"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"set pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/Users/rickon/Desktop/RenderSharedEventDriven/ToneGen.h",
+		"/C/Users/rickon/Desktop/RenderSharedEventDriven/WASAPIRenderer.cpp",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/F/github/audioplayer/audioplayer/audioplayer/ReadMe.txt",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.h",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.h",
+		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderer.cpp",
+		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderer.h",
+		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderSharedTimerDriven.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/define.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/res/define.h",
+		"/F/github/core-audio-apis/coreaudio/coreaudiorender.h",
+		"/F/github/core-audio-apis/coreaudio/coreaudiorender.cpp",
+		"/F/github/core-audio-apis/coreaudio/coreaudio.h",
+		"/F/github/core-audio-apis/coreaudio/coreaudio.cpp",
+		"/C/Users/rickon/Desktop/之秋自述-摄影师的爱好.txt",
+		"/F/github/core-audio-apis/coreaudio/getwave.cpp",
+		"/F/github/core-audio-apis/coreaudio/notification.h",
+		"/F/github/core-audio-apis/coreaudio/CWaveFile.h",
+		"/F/github/core-audio-apis/coreaudio/coreaudiocaoture.cpp",
+		"/F/github/core-audio-apis/coreaudio/coreaudiocaoture.h",
+		"/F/github/core-audio-apis/coreaudio/CWaveFile.cpp",
+		"/C/Users/rickon/Desktop/caiqin.wav",
+		"/E/CloudMusic/蔡琴 - 被遗忘的时光.mp3",
+		"/C/Users/rickon/Desktop/3.WAV",
+		"/C/Users/rickon/Desktop/1.wav",
+		"/C/Users/rickon/Desktop/anheqiao.wav",
+		"/F/github/core-audio-apis/coreaudio/coreaudio.vcxproj",
+		"/F/github/core-audio-apis/coreaudio/coreaudio.vcxproj.filters",
+		"/C/Users/rickon/Desktop/02.pcm",
+		"/C/Users/rickon/Desktop/01.wav",
+		"/C/Users/rickon/Desktop/sample.cpp",
+		"/C/Users/rickon/Desktop/03.wav",
+		"/C/Users/rickon/Desktop/逃跑计划 - 一万次悲伤.wav",
+		"/F/github/core-audio-apis/coreaudio/coreaudio.cpp.back.cpp",
+		"/C/Users/rickon/Desktop/2.wav",
+		"/C/Users/rickon/Desktop/CWaveFile_src/CWaveFile.h",
+		"/C/Users/rickon/AppData/Roaming/baidu/BaiduYunGuanjia/sounds/1.wav",
+		"/C/Users/rickon/Desktop/CWaveFile_src/filemap.h",
+		"/C/Users/rickon/Desktop/1.mp3",
+		"/C/Users/rickon/Desktop/1.pcm",
+		"/C/Users/rickon/Desktop/C++/WASAPICapture.cpp",
+		"/F/github/MicMuter/MicMuter2/main.cpp",
+		"/C/Users/rickon/Desktop/C++/MFSampleGenerator.cpp",
+		"/C/Users/rickon/Desktop/C++/WASAPIRenderer.h",
+		"/C/Users/rickon/Desktop/C++/WASAPIRenderer.cpp",
+		"/C/Users/rickon/AppData/Local/Microsoft/VisualStudio/11.0/Extensions/l4favh5k.vvo/Sample/DirectXTK/Audio/AudioEngine.cpp",
+		"/F/c/coreaudio/coreaudio/coreaudio/stdafx.h",
+		"/F/c/coreaudio/coreaudio/coreaudio/targetver.h",
+		"/F/c/coreaudio/coreaudio/coreaudio/stdafx.cpp",
+		"/F/c/coreaudio/coreaudio/coreaudio/coreaudio.cpp",
+		"/F/github/python/audio/wave.py",
+		"/F/github/python/usbtest.py",
+		"/F/DRC/RegTool v8.2beta1/VTool.ini",
+		"/C/Python27/Lib/site-packages/pywinusb/hid/winapi.py",
+		"/C/Python27/Lib/site-packages/pywinusb/hid/tools.py",
+		"/F/github/python/usb.py",
+		"/F/github/pyusb/docs/tutorial.rst",
+		"/C/Python27/Lib/site-packages/pywinusb/hid/helpers.py",
+		"/F/github/MicMuter/README.md",
+		"/F/github/python/testmast.py",
+		"/F/github/python/test.py",
+		"/F/DRC/DRCCtlUSBV2/DrcCpl/DrcUSBInterface.cpp",
+		"/F/DRC/DRCCtlUSBV2/DrcCpl/DrcCplDlg.cpp",
+		"/F/DRC/DRCCtlUSBV2/DrcCpl/PolicyConfig.h",
+		"/F/DRC/AudioDrcTool/AudioDrcTool/src/com/android/audiodrctool/DrcMainActivity.java",
+		"/F/DRC/AudioDrcTool/AudioDrcTool/src/com/android/audiodrctool/DrawView.java",
+		"/C/Users/rickon/Desktop/mail.txt",
+		"/F/python/opensvn.py",
+		"/C/Python27/Lib/site-packages/setuptools/tests/test_svn.py",
+		"/C/Python27/Tools/Scripts/svneol.py",
+		"/F/c/helloworld/test/test.cpp",
+		"/F/DRC/DRCCtlUSBV2/DrcCpl/DrcCplDlg.h",
+		"/C/Users/rickon/Desktop/HDConfig.via",
+		"/F/DRC/DRCCtlUSBV2/Release/README.txt",
+		"/F/DRC/DRCCtlUSBV2/DrcCpl/DrcUSBInterface.h",
+		"/C/Users/rickon/Desktop/REGConfig.via",
+		"/F/DRC/DrcCtlUSB/DrcCpl/DrcUSBInterface.cpp",
+		"/F/DRC/DrcCpl/DrcCpl/DrcUSBInterface.cpp",
+		"/F/DRC/DrcCpl/DrcCpl/DrcUSBInterface.h",
+		"/F/DRC/AudioDrcTool/AudioDrcTool/jni/drcapi/jni/DrcDsp.cpp",
+		"/G/RegTool v8.2beta1/VTool.ini",
+		"/F/DRC/DrcCpl/DrcCpl/DrcCplDlg.cpp",
+		"/F/DRC/AudioDrcTool/AudioDrcTool/src/com/android/audiodrctool/DrcApi.java",
+		"/F/DRC/addusb/DrcUSBInterface.h",
+		"/F/DRC/addusb/DrcUSBInterface.cpp",
+		"/F/DRC/HWEQForVT3471/ViaHidApi.h",
+		"/F/DRC/HWEQForVT3471/EqInterface.h",
+		"/F/DRC/HWEQForVT3471/EqInterface.cpp",
+		"/F/DRC/DrcCpl/DrcCpl/ViaHidApi.h",
+		"/F/DRC/HWEQForVT3471/VIADev.h",
+		"/F/DRC/HWEQForVT3471/Flash.h",
+		"/F/DRC/DrcCpl/DrcCpl/DrcDsp.cpp",
+		"/F/DRC/HWEQForVT3471/EQDefines.h",
+		"/F/DRC/HWEQForVT3471/EqGraphCpl.sln",
+		"/F/DRC/HWEQForVT3471/EqGraphCplDlg.h",
+		"/F/DRC/HWEQForVT3471/EqGraphCplDlg.cpp",
+		"/F/python/audiotest.py",
+		"/F/python/1.py",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
+		"/F/python/reverse.py",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/SublimeAStyleFormatter/Default (Windows).sublime-keymap",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+		"/F/python/pip.py",
+		"/F/python/hello.py"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"DWORD taskIndex = 0;\n    hTask = AvSetMmThreadCharacteristics(TEXT(\"Pro Audio\"), &taskIndex);",
+			"AvSetMmThreadCharacteristics",
+			"Pro Audio",
+			"_AudioSamplesReadyEvent",
+			"_ShutdownEvent",
+			"_AudioSamplesReadyEvent",
+			"_StreamSwitchEvent",
+			"_ShutdownEvent",
+			"_InStreamSwitch",
+			"Shutdown",
+			"shutdown",
+			"Shutdown",
+			"shutdown",
+			"CreateEventEx",
+			"device",
+			"InterlockedIncrement",
+			"CWASAPIRenderer",
+			"main",
+			"filedate",
+			"_RenderBufferQueue",
+			"renderBuffer",
+			"_RenderBufferQueue",
+			"Start",
+			"RenderBuffer",
+			"CWASAPIRenderer",
+			"CoreAudioRender",
+			"datelen",
+			"UNIT",
+			"m_pMainWnd",
+			"CaudioplayerDlg",
+			"frp",
+			"audioplayerDlg.h",
+			"coreaudiorender.h",
+			"coreaudiorender",
+			"scdu",
+			"fseek",
+			"m_sld##Key",
+			"m_sld",
+			"this->fp",
+			"fp",
+			"CMMNotificationClient",
+			"pData",
+			"readnum",
+			"wavefx",
+			"pwfx",
+			"OnDeviceAdded",
+			"capture",
+			"EXIT_ON_ERROR",
+			"GetWaveData",
+			"EXIT_ON_ERROR",
+			"h",
+			"EXIT_ON_ERROR",
+			"temp",
+			"data1[i]",
+			"data1",
+			"memcpy",
+			"temp8",
+			"EXIT_ON_ERROR",
+			"CoTaskMemFree",
+			"numFramesAvailable",
+			"pAudioClient",
+			"hr = ",
+			"hnsActualDuration",
+			"EXIT_ON_ERROR",
+			"GetService",
+			"short",
+			"Activate",
+			"device",
+			"),\n",
+			"Activate",
+			"initialize",
+			"WAVEFORMATEXTENSIBLE",
+			"usb",
+			"init",
+			"m_fAT",
+			"SYNC_SLD_EDIT_SLOPE_VALUE",
+			"INIT_SLD_SLOPE_CTRL",
+			"Init",
+			"CDrcCplDlg",
+			"m_sldNT",
+			"INIT_SLD_CTRL",
+			"SetRange",
+			"IDC_SLIDER",
+			"bRedraw",
+			"SLIDER",
+			"m_SeekBarExpanderSlope",
+			"m_EditTextExpanderSlope",
+			"main",
+			"ReadRegByte",
+			"type",
+			"req",
+			"PANEL",
+			"sDev",
+			"UpdateDrcSetting",
+			"DAC",
+			"INIT_SLD_SLOPE_CTRL_PROP",
+			"ADCPams",
+			"INIT_SLD_CTRL_PROP",
+			"ADCPams",
+			"INIT_SLD_SLOPE_CTRL_Value",
+			"INIT_SLD_CTRL_Value",
+			"selct",
+			"init",
+			"WriteAllHWDrc",
+			"OnCbnSelchangeComboEp",
+			"SAVE_ADCDRC_KEY",
+			"OnBnClickedButton2",
+			"0x93",
+			"0x0a59",
+			"0x9c",
+			"0x02",
+			"UpdateDrcSetting",
+			"CHwDrcVerb",
+			"WriteAllHWDrc",
+			"UpdateDrcSetting",
+			"m_listSR",
+			"96",
+			"48",
+			"16",
+			"Capture",
+			"step",
+			"m_fCS",
+			"m_fCT",
+			"m_BaseAddr",
+			"m_fLT",
+			"m_fAT",
+			"UpdateDrcTimeByUsb",
+			"WriteRegByte"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 55.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 186.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "audioplayer.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"addlg",
+				"audioplayer\\audioplayerDlg.cpp"
+			],
+			[
+				"cwav",
+				"CWaveFile.h"
+			],
+			[
+				"eqin",
+				"EqInterface.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 138.0,
+		"selected_items":
+		[
+			[
+				"main",
+				"wmain"
+			],
+			[
+				"render",
+				"CoreAudioRender"
+			]
+		],
+		"width": 360.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

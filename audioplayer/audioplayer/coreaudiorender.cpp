@@ -1,8 +1,9 @@
 #include "stdafx.h"
-
+#include "Avrt.h"
 #include "coreaudiorender.h"
-DWORD flags = 0;
-unsigned int WINAPI CoreAudioRender(void *)
+#pragma comment(lib,"Avrt.lib")
+volatile DWORD flags = 0;
+DWORD  WINAPI CoreAudioRender(LPVOID pM)
 {
     IMMDeviceEnumerator *pEnumerator = NULL;
     IMMDevice *pDevice = NULL;
@@ -12,12 +13,14 @@ unsigned int WINAPI CoreAudioRender(void *)
     HRESULT hr;
     REFERENCE_TIME hnsRequestedDuration = REFTIMES_PER_SEC * 1;
     REFERENCE_TIME hnsActualDuration;
-
+    HANDLE hTask = NULL;
+    HANDLE hEvent = NULL;
     UINT32 bufferFrameCount;
     UINT32 numFramesAvailable;
     UINT32 numFramesPadding;
     UINT32 readnum = 0;
     BYTE *pData;
+    flags = 0x00;
     CoInitialize(NULL);  //to tell system creat COM by single thread!!!!
     hr = CoCreateInstance(
              CLSID_MMDeviceEnumerator, NULL,
@@ -38,13 +41,34 @@ unsigned int WINAPI CoreAudioRender(void *)
     hr = pAudioClient->GetMixFormat(&pwfx);
 
 
-    hr = pAudioClient->Initialize(
-             AUDCLNT_SHAREMODE_SHARED,
-             0,
-             hnsRequestedDuration,
-             0,
-             pwfx,
-             NULL);
+    // hr = pAudioClient->Initialize(
+    //          AUDCLNT_SHAREMODE_SHARED,
+    //          0,
+    //          hnsRequestedDuration,
+    //          0,
+    //          pwfx,
+    //          NULL);
+      hr = pAudioClient->Initialize(
+                         AUDCLNT_SHAREMODE_SHARED,
+                         AUDCLNT_STREAMFLAGS_EVENTCALLBACK,
+                         hnsRequestedDuration,
+                         hnsRequestedDuration,
+                         pwfx,
+                         NULL);
+
+
+    hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
+    if (hEvent == NULL)
+    {
+        hr = E_FAIL;
+    }
+
+    hr = pAudioClient->SetEventHandle(hEvent);
+
+
+
+
+
 
     hr = pAudioClient->GetBufferSize(&bufferFrameCount);
 
@@ -68,6 +92,14 @@ unsigned int WINAPI CoreAudioRender(void *)
     // Calculate the actual duration of the allocated buffer.
     hnsActualDuration = (double)REFTIMES_PER_SEC *
                         bufferFrameCount / pwfx->nSamplesPerSec;
+
+
+    DWORD taskIndex = 0;
+    LPCWSTR lpStr;
+    CString str1 = L"pro Audio";
+    lpStr = str1;
+    hTask = AvSetMmThreadCharacteristics( lpStr, &taskIndex);
+
 
     hr = pAudioClient->Start();  // Start playing.
 
@@ -110,7 +142,18 @@ unsigned int WINAPI CoreAudioRender(void *)
         else
         {
             // Sleep for half the buffer duration.
-            Sleep((DWORD)(hnsActualDuration / REFTIMES_PER_MILLISEC / 2));
+            // Sleep((DWORD)(hnsActualDuration / REFTIMES_PER_MILLISEC / 2));
+            //
+            //
+            DWORD retval = WaitForSingleObject(hEvent, INFINITE);
+            // if (retval != WAIT_OBJECT_0)
+            // {
+            //     // Event handle timed out after a 2-second wait.
+            //     pAudioClient->Stop();
+            //     hr = ERROR_TIMEOUT;
+            // }
+
+            //
             //  fseek(fldta.frp, DATA + fldta.seek, SEEK_SET);
             // See how much buffer space is available.
             hr = pAudioClient->GetCurrentPadding(&numFramesPadding);
@@ -148,6 +191,14 @@ unsigned int WINAPI CoreAudioRender(void *)
     SAFE_RELEASE(pAudioClient)
     SAFE_RELEASE(pRenderClient)
     CoUninitialize();
+    if (hEvent != NULL)
+    {
+        CloseHandle(hEvent);
+    }
+    if (hTask != NULL)
+    {
+        AvRevertMmThreadCharacteristics(hTask);
+    }
     fldta.scdu = 0;
     fldta.seek = 0;
     flags = 0;

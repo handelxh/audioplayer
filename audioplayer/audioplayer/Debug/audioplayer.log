@@ -1,15 +1,9 @@
-﻿生成启动时间为 2014/9/23 14:07:34。
+﻿生成启动时间为 2014/9/24 14:31:52。
      1>项目“F:\github\audioplayer\audioplayer\audioplayer\audioplayer.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\audioplayer.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt audioplayer.cpp audioplayerDlg.cpp
-         audioplayerDlg.cpp
-     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(103): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
-     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(111): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-         audioplayer.cpp
-         正在生成代码...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\audioplayer.res" audioplayer.rc 
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\audioplayer.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt coreaudiorender.cpp
+         coreaudiorender.cpp
+     1>f:\github\audioplayer\audioplayer\audioplayer\coreaudiorender.cpp(94): warning C4244: “=”: 从“double”转换到“REFERENCE_TIME”，可能丢失数据
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\github\audioplayer\audioplayer\Debug\audioplayer.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.lib" /MACHINE:X86 Debug\audioplayer.res
          Debug\audioplayer.obj
@@ -21,4 +15,4 @@
 
 生成成功。
 
-已用时间 00:00:02.21
+已用时间 00:00:01.36
