@@ -115,6 +115,7 @@
   <ItemGroup>
     <ClCompile Include="audioplayer.cpp" />
     <ClCompile Include="audioplayerDlg.cpp" />
+    <ClCompile Include="captureWASAPI.cpp" />
     <ClCompile Include="coreaudiorender.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

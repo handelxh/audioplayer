@@ -53,6 +53,9 @@
     <ClCompile Include="coreaudiorender.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="captureWASAPI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="audioplayer.rc">

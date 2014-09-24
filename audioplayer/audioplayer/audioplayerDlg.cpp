@@ -11,13 +11,15 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-using namespace  std;
-// CaudioplayerDlg 对话框
+// using namespace  std;
 struct filedate fldta;
+struct filedate frecord;
 CSliderCtrl schedule;
 int renderStatus = 0;
+int mi_Timer;
 CaudioplayerDlg::CaudioplayerDlg(CWnd *pParent /*=NULL*/)
     : CDialogEx(CaudioplayerDlg::IDD, pParent)
+	, timer(0)
 {
     m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -27,6 +29,7 @@ void CaudioplayerDlg::DoDataExchange(CDataExchange *pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_SLIDER_SCD, schedule);
 	DDX_Control(pDX, IDC_EDIT_SELC, selc);
+	DDX_Text(pDX, IDC_EDIT1, timer);
 }
 
 BEGIN_MESSAGE_MAP(CaudioplayerDlg, CDialogEx)
@@ -35,7 +38,10 @@ BEGIN_MESSAGE_MAP(CaudioplayerDlg, CDialogEx)
     ON_BN_CLICKED(IDC_BUTTON1, &CaudioplayerDlg::OnBnClickedButton1)
     ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER_SCD, &CaudioplayerDlg::OnNMCustomdrawSliderScd)
     ON_BN_CLICKED(stop, &CaudioplayerDlg::OnBnClickedstop)
-	ON_BN_CLICKED(IDC_BUTTON2, &CaudioplayerDlg::OnBnClickedButton2)
+    ON_BN_CLICKED(IDC_BUTTON2, &CaudioplayerDlg::OnBnClickedButton2)
+    ON_BN_CLICKED(IDC_BUTTON_record, &CaudioplayerDlg::OnBnClickedButtonrecord)
+    ON_WM_TIMER()
+	ON_BN_CLICKED(IDC_BUTTON4, &CaudioplayerDlg::OnBnClickedButton4)
 END_MESSAGE_MAP()
 
 
@@ -97,22 +103,22 @@ HCURSOR CaudioplayerDlg::OnQueryDragIcon()
 
 
 
- HANDLE handle =NULL;
+HANDLE handle = NULL;
 TCHAR FileName[FILENAME_MAX];
 void CaudioplayerDlg::OnBnClickedButton1()
 {
-   
-    // this->OnBnClickedstop();
-     //flags = 0x02;
-   //WaitForSingleObject(handle, INFINITE);
 
-   // string fname = "F:\\github\\core-audio-apis\\wavsource\\caiqin.wav";
-     //fname = FileName;_tfopen
+    // this->OnBnClickedstop();
+    //flags = 0x02;
+    //WaitForSingleObject(handle, INFINITE);
+
+    // string fname = "F:\\github\\core-audio-apis\\wavsource\\caiqin.wav";
+    //fname = FileName;
     // Sleep(3000);
     if (renderStatus == 0 && FileName[0] != NULL)
     {
 
-        if ((fldta.frp = _tfopen(FileName,_T("rb"))) == NULL)
+        if ((fldta.frp = _tfopen(FileName, _T("rb"))) == NULL)
         {
             printf("can not open this wave file\n");
         }
@@ -140,6 +146,7 @@ void CaudioplayerDlg::OnBnClickedstop()
 {
     // TODO: 在此添加控件通知处理程序代码
     flags = 0x02;
+
 }
 
 
@@ -154,10 +161,32 @@ void CaudioplayerDlg::OnBnClickedButton2()
     {
         return;
     }
-     CString sFileName =Dlg.GetPathName();
+    CString sFileName = Dlg.GetPathName();
     ULONG ulBufLen = Dlg.GetPathName().GetLength();
     _tcscpy( FileName, (LPCTSTR)Dlg.GetPathName());
-	 flags = 0x02;
-		selc.SetWindowText(sFileName);
-		UpdateData(FALSE);
+    flags = 0x02;
+    selc.SetWindowText(sFileName);
+    UpdateData(FALSE);
+}
+
+
+void CaudioplayerDlg::OnBnClickedButtonrecord()
+{
+    timer =0;
+    handle = CreateThread(NULL, 0, CoreAudioCapture, NULL, 0, NULL);
+    SetTimer(1, 1000, NULL);            
+}
+
+
+void CaudioplayerDlg::OnTimer(UINT_PTR nIDEvent)
+{
+    CDialog::OnTimer(nIDEvent);
+    timer++;
+    UpdateData(FALSE);
+}
+
+void CaudioplayerDlg::OnBnClickedButton4()
+{
+	 KillTimer(1); 
+     bDone = TRUE; 
 }

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"T",
+				"TRUE"
+			],
+			[
 				"read",
 				"readnum"
 			],
@@ -119,12 +123,12 @@
 				"File: Save All"
 			],
 			[
-				"main",
-				"Set Syntax: MultiMarkdown"
-			],
-			[
 				"sa",
 				"File: Save All"
+			],
+			[
+				"main",
+				"Set Syntax: MultiMarkdown"
 			],
 			[
 				"instal",
@@ -176,29 +180,36 @@
 	},
 	"expanded_folders":
 	[
+		"/F/github/audioplayer/audioplayer/audioplayer"
 	],
 	"file_history":
 	[
-		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/captureWASAPI.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/WASAPICaptureTimerDriven-{4AA42611-90A5-4C4A-8CAB-C4ACF243D000}.WAV",
+		"/F/github/audioplayer/audioplayer/audioplayer/recordaWASAPI.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/recordaWASAPI.cpp",
 		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/define.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/resource.h",
+		"/F/github/audioplayer/audioplayer/audioplayer/Debug/link.command.1.tlog",
+		"/C/Program Files/Sublime Text 3/recordaWASAPI.h",
+		"/C/Program Files/Sublime Text 3/recordaWASAPI.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.aps",
 		"/F/github/audioplayer/audioplayer/audioplayer/CWaveFile.h",
-		"/F/github/audioplayer/audioplayer/audioplayer/Debug/link.command.1.tlog",
 		"/F/github/audioplayer/audioplayer/audioplayer/Debug/audioplayer.lastbuildstate",
 		"/C/Users/rickon/Desktop/RenderSharedEventDriven/ToneGen.h",
 		"/C/Users/rickon/Desktop/RenderSharedEventDriven/WASAPIRenderer.cpp",
 		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/F/github/audioplayer/audioplayer/audioplayer/ReadMe.txt",
 		"/C/Users/rickon/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/audioplayer.cpp",
 		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderer.cpp",
 		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderer.h",
 		"/C/Users/rickon/Desktop/RenderSharedTimerDriven/WASAPIRenderSharedTimerDriven.cpp",
-		"/F/github/audioplayer/audioplayer/audioplayer/define.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/res/define.h",
 		"/F/github/core-audio-apis/coreaudio/coreaudiorender.h",
 		"/F/github/core-audio-apis/coreaudio/coreaudiorender.cpp",
@@ -314,6 +325,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"SaveWaveData",
+			"filedate",
+			"fp",
+			"flags",
 			"pM",
 			"flags",
 			"DWORD taskIndex = 0;\n    hTask = AvSetMmThreadCharacteristics(TEXT(\"Pro Audio\"), &taskIndex);",
@@ -437,11 +452,7 @@
 			"16",
 			"Capture",
 			"step",
-			"m_fCS",
-			"m_fCT",
-			"m_BaseAddr",
-			"m_fLT",
-			"m_fAT"
+			"m_fCS"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -514,6 +525,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"rendcpp",
+				"coreaudiorender.cpp"
+			],
+			[
+				"rend",
+				"coreaudiorender.cpp"
+			],
+			[
+				"def",
+				"define.h"
+			],
+			[
+				"dlg",
+				"audioplayerDlg.cpp"
+			],
+			[
+				"render",
+				"coreaudiorender.cpp"
+			],
 			[
 				"audiodlgh",
 				"audioplayerDlg.h"
@@ -597,7 +628,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 137.0,
+	"side_bar_width": 147.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

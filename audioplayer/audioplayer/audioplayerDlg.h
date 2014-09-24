@@ -12,7 +12,9 @@
 #include "windows.h"
 #include "afxwin.h"
 extern DWORD  WINAPI CoreAudioRender(LPVOID pM);
+extern DWORD  WINAPI CoreAudioCapture(LPVOID pM);
 extern volatile DWORD flags;
+extern BOOL bDone ;
 #pragma once
 
 // CaudioplayerDlg ¶Ô»°¿ò
@@ -45,5 +47,11 @@ public:
 	afx_msg void OnNMCustomdrawSliderScd(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnBnClickedstop();
 	afx_msg void OnBnClickedButton2();
+	afx_msg void OnBnClickedButtonrecord();
 	CEdit selc;
+	afx_msg void OnTimer(UINT_PTR nIDEvent); 
+
+	int timer;
+	afx_msg void OnBnClickedButton4();
 };
+
