@@ -1,13 +1,13 @@
-﻿生成启动时间为 2014/9/24 18:38:52。
+﻿生成启动时间为 2014/10/8 14:18:10。
      1>项目“F:\github\audioplayer\audioplayer\audioplayer\audioplayer.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\audioplayer.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt captureWASAPI.cpp
-         captureWASAPI.cpp
-     1>f:\github\audioplayer\audioplayer\audioplayer\capturewasapi.cpp(180): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
-     1>f:\github\audioplayer\audioplayer\audioplayer\capturewasapi.cpp(217): warning C4244: “=”: 从“double”转换到“REFERENCE_TIME”，可能丢失数据
-     1>f:\github\audioplayer\audioplayer\audioplayer\capturewasapi.cpp(225): warning C4244: “参数”: 从“REFERENCE_TIME”转换到“DWORD”，可能丢失数据
-     1>f:\github\audioplayer\audioplayer\audioplayer\capturewasapi.cpp(254): warning C4102: “Exit”: 未引用的标签
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\audioplayer.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt audioplayerDlg.cpp
+         audioplayerDlg.cpp
+     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(121): warning C4996: '_wfopen': This function or variable may be unsafe. Consider using _wfopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\wchar.h(838) : 参见“_wfopen”的声明
+     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(129): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>f:\github\audioplayer\audioplayer\audioplayer\audioplayerdlg.cpp(165): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(288) : 参见“wcscpy”的声明
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\github\audioplayer\audioplayer\Debug\audioplayer.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\github\audioplayer\audioplayer\Debug\audioplayer.lib" /MACHINE:X86 Debug\audioplayer.res
          Debug\audioplayer.obj
@@ -20,4 +20,4 @@
 
 生成成功。
 
-已用时间 00:00:02.78
+已用时间 00:00:03.84

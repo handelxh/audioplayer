@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "captureWASAPI.h"
 #include <strsafe.h>
+#include <io.h>
 //
 //  WAV file writer.
 //
@@ -12,7 +13,7 @@
 //
 //  RIFF header:    8 bytes consisting of the signature "RIFF" followed by a 4 byte file length.
 //  WAVE header:    4 bytes consisting of the signature "WAVE".
-//  fmt header:     4 bytes consisting of the signature "fmt " followed by a WAVEFORMATEX 
+//  fmt header:     4 bytes consisting of the signature "fmt " followed by a WAVEFORMATEX
 //  WAVEFORMAT:     <n> bytes containing a waveformat structure.
 //  DATA header:    8 bytes consisting of the signature "data" followed by a 4 byte file length.
 //  wave data:      <m> bytes containing wave data.
@@ -30,7 +31,7 @@ struct WAVEHEADER
 };
 
 //  Static RIFF header, we'll append the format to it.
-const BYTE WaveHeader[] = 
+const BYTE WaveHeader[] =
 {
     'R',   'I',   'F',   'F',  0x00,  0x00,  0x00,  0x00, 'W',   'A',   'V',   'E',   'f',   'm',   't',   ' ', 0x00, 0x00, 0x00, 0x00
 };
@@ -125,23 +126,30 @@ void SaveWaveData(BYTE *CaptureBuffer, size_t BufferSize, const WAVEFORMATEX *Wa
                 hr = StringCbCat(waveFileName, sizeof(waveFileName), guidString);
                 if (SUCCEEDED(hr))
                 {
-                    hr = StringCbCat(waveFileName, sizeof(waveFileName), L".WAV");
+                    hr = StringCbCat(waveFileName, sizeof(waveFileName), L".wav");
                     if (SUCCEEDED(hr))
                     {
-                        HANDLE waveHandle = CreateFile(waveFileName, GENERIC_WRITE, FILE_SHARE_READ, NULL, CREATE_ALWAYS, 
-                            FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN, 
-                            NULL);
+                        HANDLE waveHandle = CreateFile(waveFileName, GENERIC_WRITE, FILE_SHARE_READ, NULL, CREATE_ALWAYS,
+                                                       FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
+                                                       NULL);
                         if (waveHandle != INVALID_HANDLE_VALUE)
                         {
-                            if (WriteWaveFile(waveHandle, CaptureBuffer, BufferSize, WaveFormat))
-                            {
-                                printf("Successfully wrote WAVE data to %S\n", waveFileName);
-                            }
-                            else
-                            {
-                                printf("Unable to write wave file\n");
-                            }
-
+                            // if (WriteWaveFile(waveHandle, CaptureBuffer, BufferSize, WaveFormat))
+                            // {
+                            //     printf("Successfully wrote WAVE data to %S\n", waveFileName);
+                            // }
+                            // else
+                            // {
+                            //     printf("Unable to write wave file\n");
+                            // }
+                            string ftemp = "F:\\github\\audioplayer\\wavsource\\temp.pcm";
+                            FILE *ftmp = fopen(ftemp.c_str(), "rb");
+							int fn = fileno(ftmp);
+                             unsigned int bufsize;
+							 bufsize = filelength(fn);
+							 BYTE *buf1 = new BYTE[bufsize];
+							 fread(buf1,bufsize,1,ftmp);
+                            WriteWaveFile(waveHandle, buf1, bufsize, WaveFormat);
                             CloseHandle(waveHandle);
                         }
                         else
@@ -159,7 +167,7 @@ void SaveWaveData(BYTE *CaptureBuffer, size_t BufferSize, const WAVEFORMATEX *Wa
 
 
 
-BOOL bDone = FALSE;
+BOOL bDone = TRUE;
 DWORD  WINAPI CoreAudioCapture(LPVOID pM)
 {
     HRESULT hr;
@@ -177,7 +185,7 @@ DWORD  WINAPI CoreAudioCapture(LPVOID pM)
     DWORD flags = 0;
     FILE *Precord = NULL;
     string ftemp = "F:\\github\\audioplayer\\wavsource\\temp.pcm";
-    Precord = fopen(ftemp.c_str(),"wb");
+    Precord = fopen(ftemp.c_str(), "wb");
     bDone = FALSE;
     CoInitialize(NULL);  //to tell system creat COM by single thread!!!!
     hr = CoCreateInstance(
@@ -215,7 +223,7 @@ DWORD  WINAPI CoreAudioCapture(LPVOID pM)
     // Calculate the actual duration of the allocated buffer.
     hnsActualDuration = (double)REFTIMES_PER_SEC *
                         bufferFrameCount / pwfx->nSamplesPerSec;
-        
+
     hr = pAudioClient->Start();  // Start recording.
 
     // Each loop fills about half of the shared buffer.
@@ -238,7 +246,7 @@ DWORD  WINAPI CoreAudioCapture(LPVOID pM)
             {
                 pData = NULL;  // Tell CopyData to write silence.
             }
-            fwrite(pData,sizeof(BYTE),numFramesAvailable*8,Precord);
+            fwrite(pData, sizeof(BYTE), numFramesAvailable * 8, Precord);
             // Copy the available capture data to the audio sink.
             //            hr = pMySink->CopyData(
             //                              pData, numFramesAvailable, &bDone);
@@ -252,12 +260,13 @@ DWORD  WINAPI CoreAudioCapture(LPVOID pM)
     hr = pAudioClient->Stop();  // Stop recording.
 
 Exit:
-    SaveWaveData(pData,0,pwfx);
+    SaveWaveData(pData, 0, pwfx);
     CoTaskMemFree(pwfx);
     SAFE_RELEASE(pEnumerator)
     SAFE_RELEASE(pDevice)
     SAFE_RELEASE(pAudioClient)
     SAFE_RELEASE(pCaptureClient)
+    bDone = TRUE ;
     fclose(Precord);
     return 0;
 }

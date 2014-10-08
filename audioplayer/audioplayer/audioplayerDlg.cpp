@@ -19,17 +19,17 @@ int renderStatus = 0;
 int mi_Timer;
 CaudioplayerDlg::CaudioplayerDlg(CWnd *pParent /*=NULL*/)
     : CDialogEx(CaudioplayerDlg::IDD, pParent)
-	, timer(0)
+    , timer(0)
 {
     m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
 void CaudioplayerDlg::DoDataExchange(CDataExchange *pDX)
 {
-	CDialogEx::DoDataExchange(pDX);
-	DDX_Control(pDX, IDC_SLIDER_SCD, schedule);
-	DDX_Control(pDX, IDC_EDIT_SELC, selc);
-	DDX_Text(pDX, IDC_EDIT1, timer);
+    CDialogEx::DoDataExchange(pDX);
+    DDX_Control(pDX, IDC_SLIDER_SCD, schedule);
+    DDX_Control(pDX, IDC_EDIT_SELC, selc);
+    DDX_Text(pDX, IDC_EDIT1, timer);
 }
 
 BEGIN_MESSAGE_MAP(CaudioplayerDlg, CDialogEx)
@@ -41,7 +41,7 @@ BEGIN_MESSAGE_MAP(CaudioplayerDlg, CDialogEx)
     ON_BN_CLICKED(IDC_BUTTON2, &CaudioplayerDlg::OnBnClickedButton2)
     ON_BN_CLICKED(IDC_BUTTON_record, &CaudioplayerDlg::OnBnClickedButtonrecord)
     ON_WM_TIMER()
-	ON_BN_CLICKED(IDC_BUTTON4, &CaudioplayerDlg::OnBnClickedButton4)
+    ON_BN_CLICKED(IDC_BUTTON4, &CaudioplayerDlg::OnBnClickedButton4)
 END_MESSAGE_MAP()
 
 
@@ -105,7 +105,7 @@ HCURSOR CaudioplayerDlg::OnQueryDragIcon()
 
 HANDLE handle = NULL;
 TCHAR FileName[FILENAME_MAX];
-void CaudioplayerDlg::OnBnClickedButton1()
+void CaudioplayerDlg::OnBnClickedButton1()  //play 
 {
 
     // this->OnBnClickedstop();
@@ -146,7 +146,6 @@ void CaudioplayerDlg::OnBnClickedstop()
 {
     // TODO: 在此添加控件通知处理程序代码
     flags = 0x02;
-
 }
 
 
@@ -172,9 +171,12 @@ void CaudioplayerDlg::OnBnClickedButton2()
 
 void CaudioplayerDlg::OnBnClickedButtonrecord()
 {
-    timer =0;
-    handle = CreateThread(NULL, 0, CoreAudioCapture, NULL, 0, NULL);
-    SetTimer(1, 1000, NULL);            
+    timer = 0;
+    if (bDone == TRUE)
+    {
+        handle = CreateThread(NULL, 0, CoreAudioCapture, NULL, 0, NULL);
+        SetTimer(1, 1000, NULL);
+    }
 }
 
 
@@ -187,6 +189,6 @@ void CaudioplayerDlg::OnTimer(UINT_PTR nIDEvent)
 
 void CaudioplayerDlg::OnBnClickedButton4()
 {
-	 KillTimer(1); 
-     bDone = TRUE; 
+    KillTimer(1);
+    bDone = TRUE;
 }

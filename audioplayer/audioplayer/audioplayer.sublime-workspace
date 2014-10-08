@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fal",
+				"FALSE"
+			],
+			[
 				"T",
 				"TRUE"
 			],
@@ -184,14 +188,16 @@
 	],
 	"file_history":
 	[
-		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.h",
-		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.cpp",
-		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/captureWASAPI.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.cpp",
+		"/F/github/audioplayer/audioplayer/audioplayer/audioplayerDlg.h",
+		"/F/github/audioplayer/wavsource/caiqin.wav",
+		"/F/github/audioplayer/wavsource/WASAPICapture-{DE8B3105-23B9-46D4-958C-8E111C1AECC7}.wav",
+		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/WASAPICaptureTimerDriven-{4AA42611-90A5-4C4A-8CAB-C4ACF243D000}.WAV",
 		"/F/github/audioplayer/audioplayer/audioplayer/recordaWASAPI.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/recordaWASAPI.cpp",
-		"/F/github/audioplayer/audioplayer/audioplayer/coreaudiorender.cpp",
 		"/F/github/audioplayer/audioplayer/audioplayer/define.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/resource.h",
 		"/F/github/audioplayer/audioplayer/audioplayer/Debug/link.command.1.tlog",
@@ -526,6 +532,10 @@
 		"selected_items":
 		[
 			[
+				"",
+				"F:\\github\\audioplayer\\wavsource\\caiqin.wav"
+			],
+			[
 				"rendcpp",
 				"coreaudiorender.cpp"
 			],
@@ -578,12 +588,24 @@
 	},
 	"select_symbol":
 	{
-		"height": 63.0,
+		"height": 242.0,
 		"selected_items":
 		[
 			[
+				"ni",
+				"OnInitDialog"
+			],
+			[
 				"rende",
 				"CoreAudioRender"
+			],
+			[
+				"save",
+				"SaveWaveData"
+			],
+			[
+				"butt",
+				"OnBnClickedButton4"
 			],
 			[
 				"rend",
@@ -596,10 +618,6 @@
 			[
 				"butt1",
 				"IDC_BUTTON1"
-			],
-			[
-				"butt",
-				"OnBnClickedButton2"
 			],
 			[
 				"bu",
